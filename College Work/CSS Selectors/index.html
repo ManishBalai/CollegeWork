@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Selectors </title>
+    <style>
+        /* This is a Group Selector */
+        * {
+            background-color: rgb(0, 183, 255);
+        }
+        /* This is a Element Selector */
+        h2 {
+            text-transform: uppercase;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            transition: .3s;
+        }
+        a {
+            cursor: pointer;
+        }
+        /* This is a id Selector */
+        #id {
+            color: #000;
+            font-size: 25px;
+        }
+        /* This is a Class Selector */
+        .vk {
+            color: #000;
+            font-size: 25px;
+        }
+        /* This is a Group Selector */
+        h2 , p {
+            font-style: normal;
+            font-weight: bold;
+        }
+        /* This is a Attribute Selector */
+        [href] {
+            background-color: rgb(208, 0, 255);
+            color: white;
+            font-family: monospace;
+            font-size: 30px;
+        }
+        /* This is a Pseudo-Class Selector */
+        h2:hover {
+            font-style: italic;
+            background-color: #000;
+        }
+        [href]:hover {
+            text-decoration: none;
+        }
+        /* This is a Pseudo-Element Selector */
+        p::first-letter {
+            font-size: 40px;
+            color: brown;
+        }
+    </style>
+   
+</head>
+<body>
+    <h2> Radhe Krishn</h2>
+    <p id="id"> Lord Krishna and Radha share pure love for one another but things take a turn when Radha receives a curse that she will be separated from him. </p>
+    <h2> Virat Kohli</h2>
+    <p class="vk"> Virat Kohli is an Indian international cricketer and former captain of the Indian national team. Widely regarded as one of the greatest batsmen of all time, Kohli plays as a right-handed batsman for Royal Challengers Bangalore in the IPL and for Delhi in Indian domestic cricket.</p>
+    <a href="https://web.snapchat.com/"> Snapchat web</a>
+</body>
+</html>

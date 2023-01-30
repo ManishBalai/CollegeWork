@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS media query</title>
+    <style>
+        body {
+            text-align: center;
+        }
+         
+        .gfg {
+            font-size: 50px;
+            font-weight: bold;
+            color: rgb(159, 51, 242);
+        }
+        .geeks {
+            font-size: 25px;
+            font-weight: bold;
+            color: brown;
+        }
+        @media screen and (max-width:800px) {
+            body {
+                text-align: center;
+                background-color: rgb(159, 47, 245);
+            }
+            .gfg {
+                font-size: 30px;
+                font-weight: bold;
+                color: white;
+            }
+            .geeks {
+                font-size: 20px;
+                font-weight: bold;
+                color: white;
+            }
+        }
+         
+        @media screen and (max-width:500px) {
+            body {
+                text-align: center;
+                background-color: brown;
+            }
+        }
+        </style>
+</head>
+<body>
+    <div class="gfg"> Virat Kohli </div>
+    <div class="geeks">Virat Kohli is an Indian international cricketer and former captain of the Indian national team. He is widely regarded as one of the greatest batsmen of all time in international cricket. Kohli plays as a right-handed batsman for Royal Challengers Bangalore in the IPL and for Delhi in Indian domestic cricket.</div>
+
+</body>
+</html>
+    
+    

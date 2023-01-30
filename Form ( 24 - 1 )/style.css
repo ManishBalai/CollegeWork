@@ -1,0 +1,40 @@
+.h2 {
+    color: rgb(255, 0, 0);
+    text-align: center;
+    font-weight: 300;
+    font-size: 30px;
+    font-family: arial;
+}
+.h2:hover {
+    color: blueviolet;
+}
+.content {
+    background-color: rgb(255, 247, 0);
+    color: rgb(27, 114, 184);
+    font-size: 30px;
+}
+
+.head {
+    height: 150px;
+    width:150px;
+    background-color: antiquewhite;
+}
+
+#title:hover {
+    font-style: italic;
+    color: blue;
+}
+
+#about {
+    text-decoration: none;
+    color: blueviolet;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    ;
+    font-size: 30px;
+}
+ #about:hover {
+    color: chartreuse;
+ } 
+ #about:active {
+    color: coral;
+ }
