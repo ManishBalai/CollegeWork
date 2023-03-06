@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hello </title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <style>
+        html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    /* display: flex; */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+h1 {
+    margin-left: 5%;
+    margin-right: 5%;
+    color: aqua;
+    box-sizing: border-box;
+    border: 5px double aqua;
+    width: 90%;
+}
+h1:hover {
+    background-color: aqua;
+    color: black;
+}
+p {
+    color: rgb(235, 77, 77);
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 10px 5px 10px 5px ;
+    width: 90%;
+    border: 5px double rgb(235, 77, 77);
+}
+p:hover {
+    background-color: rgb(235, 77, 77);
+    padding: 15px 10px 15px 10px;
+    color: #000;
+}
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("p").hide();
+            });
+            $("#show").click(function(){
+                $("p").show();
+            });
+        });
+    </script>
+</head>
+<body style="text-align: center;">
+    <h1>Narendra Modi</h1>
+    <p>
+        Narendra Damodardas Modi ji (Gujarati: born 17 September 1950) is an Indian politician serving as the 14th and current Prime Minister of India since 2014. Modi was the Chief Minister of Gujarat from 2001 to 2014 and is the Member of Parliament from Varanasi. He is a member of the Bharatiya Janata Party (BJP) and of the Rashtriya Swayamsevak Sangh (RSS), a right-wing Hindu nationalist paramilitary volunteer organisation. He is the longest serving prime minister from outside the Indian National Congress. 
+    </p>
+    <button id="hide" class="glow-on-hover"> HIDE </button>
+    <button id="show" class="glow-on-hover"> SHOW </button>
+</body>
+</html>
